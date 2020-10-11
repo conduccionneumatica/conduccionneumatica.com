@@ -1,0 +1,128 @@
+---
+---
+
+@import 'constants';
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+
+  @include media-query(MOBILE) {
+    font-size: 14px;
+  }
+}
+
+body {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  background-color: $COLOR-BACKGROUND;
+  color: $COLOR-TEXT;
+  font-family: $FONT-TEXT;
+}
+
+strong { font-weight: bold; }
+em { font-style: italic; }
+s { text-decoration: line-through; }
+
+a {
+  color: $COLOR-LINK;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color $TRANSITION-PERIOD linear;
+
+  &:visited {
+    color: $COLOR-LINK;
+  }
+
+  &:hover {
+    color: $COLOR-LINK-HOVER;
+  }
+}
+
+.home-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: $COLOR-BACKGROUND;
+}
+
+.page-content {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+
+  .signup-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+
+    @include media-query(MOBILE) {
+      width: 95%;
+    }
+
+    .signup-text {
+      text-align: center;
+    }
+
+    .signup-error {
+      margin-top: 50px;
+      opacity: 0;
+      color: $COLOR-TEXT-ERROR;
+      font-size: 13px;
+      text-align: center;
+      padding-bottom: 8px;
+    }
+
+    .signup-form {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-end;
+      text-align: center;
+
+      label {
+        text-transform: uppercase;
+        text-align: right;
+      }
+
+      input {
+        width: 50%;
+        margin: 0 40px;
+        padding: 2px 6px;
+        border: 0;
+        line-height: 1.7;
+
+        &:focus {
+          outline:none;
+        }
+      }
+    }
+  }
+
+  .signup-button-image {
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 0 0 -6px;
+    padding: 6px 10px 7px;
+    border: 1px $COLOR-TEXT solid;
+    border-radius: 4px;
+  }
+}
+
+#mc_embed_signup {
+  position: absolute;
+  top: -1000px;
+  left: 50%;
+}
