@@ -74,13 +74,49 @@ a {
       max-width: none;
     }
 
+    .logo-image-container {
+      width: 80%;
+      max-width: 350px;
+      margin: 0 auto;
+
+      .logo-image {
+        width: 100%;
+        padding-bottom: 74.61%;
+        background-image: url({{ site.baseurl }}/images/logo.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+      }
+    }
+
+    .aire-text {
+      text-align: center;
+      margin: 32px 0;
+    }
+
+    .date-image-container {
+      width: 40%;
+      max-width: 200px;
+      margin: 0 auto;
+
+      .date-image {
+        width: 100%;
+        padding-bottom: 12.75%;
+        background-image: url({{ site.baseurl }}/images/fecha.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+      }
+    }
+
     .signup-text {
+      margin: 28px 0 14px;
       text-align: center;
     }
 
     .signup-error {
       width: 100%;
-      margin-top: 50px;
+      margin-top: 8px;
       opacity: 0;
       color: $COLOR-TEXT-ERROR;
       font-size: 13px;
