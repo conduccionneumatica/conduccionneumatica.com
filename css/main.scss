@@ -169,6 +169,29 @@ a {
     }
   }
 }
+.video-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: rgba(0,0,0,0);
+}
+
+.showcase-video {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgba(0,0,0,0);
+  &:focus {
+    outline:0;
+  }
+}
 
 #mc_embed_signup {
   position: absolute;
