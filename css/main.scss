@@ -136,6 +136,11 @@ a {
         text-transform: uppercase;
         text-align: right;
         width: 20%;
+        font-size: 14px;
+
+        @include media-query(MOBILE) {
+          font-size: 12px;
+        }
       }
 
       input {
@@ -144,6 +149,12 @@ a {
         padding: 2px 6px;
         border: 0;
         line-height: 1.7;
+        font-size: 14px;
+
+        @include media-query(MOBILE) {
+          font-size: 12px;
+          margin: 0 30px;
+        }
 
         &:focus {
           outline:none;
@@ -161,17 +172,18 @@ a {
     border: 1px $COLOR-TEXT solid;
     border-radius: 4px;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 14px;
     background-color: lighten($COLOR-BACKGROUND, 10%);
 
     @include media-query(MOBILE) {
       font-size: 12px;
+      width: 25%;
     }
   }
 
   .logo-container {
     width: 33%;
-    margin: 0 auto;
+    margin: 20px auto 0;
 
     @include media-query(MOBILE) {
       width: 50%;
